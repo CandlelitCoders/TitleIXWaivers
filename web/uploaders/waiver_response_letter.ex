@@ -9,6 +9,14 @@ defmodule TitleIxWaivers.WaiverResponseLetter do
 
   @acl :public_read
 
+  def __storage do
+    if Mix.env == :dev or Mix.env == :test do
+      Arc.Storage.Local
+    else
+      Arc.Storage.S3
+    end
+  end
+
   # To add a thumbnail version:
   # @versions [:original, :thumb]
 
