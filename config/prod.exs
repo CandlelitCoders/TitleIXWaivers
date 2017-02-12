@@ -14,8 +14,7 @@ use Mix.Config
 config :title_ix_waivers, TitleIxWaivers.Endpoint,
   http: [port: {:system, "PORT"}],
   cache_static_manifest: "priv/static/manifest.json",
-  url: [scheme: "https", host: "titleixwaivers.com", port: 443],
-  force_ssl: [rewrite_on: [:x_forwarded_proto]],
+  url: [scheme: "http", host: "titleixwaivers.com", port: 80],
   secret_key_base: System.get_env("SECRET_KEY_BASE")
 
 # Do not print debug messages in production
