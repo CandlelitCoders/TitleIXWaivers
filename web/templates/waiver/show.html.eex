@@ -1,0 +1,33 @@
+<h2>Show waiver</h2>
+
+<ul>
+
+  <li>
+    <strong>State:</strong>
+    <%= @waiver.state %>
+  </li>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @waiver.name %>
+  </li>
+
+  <li>
+    <strong>Date requested:</strong>
+    <%= @waiver.date_requested %>
+  </li>
+
+  <li>
+    <strong>Date granted:</strong>
+    <%= @waiver.date_granted %>
+  </li>
+
+  <li>
+    <strong>State:</strong>
+    <%= @waiver.state %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: waiver_path(@conn, :edit, @waiver) %>
+<%= link "Back", to: waiver_path(@conn, :index) %>

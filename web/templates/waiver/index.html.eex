@@ -1,0 +1,31 @@
+<div class="jumbotron">
+  <h2>Title IX Waiver Archive</h2>
+  <p class="lead">The Federal Government has taken down their list of Title IX Waiver applicants and recipients.<br /><br />Search an archived (as of November 2016) copy here.</p>
+</div>
+
+<div class="form-group pull-right">
+  <input type="text" class="search form-control"  placeholder="Search" />
+</div>
+<table class="table table-hover table-bordered results">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th class="col-md-2 col-xs-2">State</th>
+      <th class="col-md-5 col-xs-5">Date Requested</th>
+      <th class="col-md-5 col-xs-5">Date Granted</th>
+    </tr>
+    <tr class="warning no-result">
+      <td colspan="4"><%= fa_icon("exclamation-triangle") %> No results found</td>
+    </tr>
+  </thead>
+  <tbody>
+<%= for waiver <- @waivers do %>
+    <tr>
+      <th scope="row"><%= link(waiver.name, to: '#' || waiver_path(@conn, :show, waiver)) %></th>
+      <td><%= waiver.state %></td>
+      <td><%= waiver.date_requested %></td>
+      <td><%= waiver.date_granted %></td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
