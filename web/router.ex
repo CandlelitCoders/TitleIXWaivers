@@ -41,7 +41,7 @@ defmodule TitleIxWaivers.Router do
   end
 
   scope "/admin", ExAdmin do
-    pipe_through :browser
+    pipe_through :protected
     admin_routes()
   end
 
