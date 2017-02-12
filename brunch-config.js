@@ -2,10 +2,12 @@ exports.config = {
   // See http://brunch.io/#documentation for docs.
   files: {
     javascripts: {
-     "js/app.js": /^(web\/static\/js)|(node_modules)/,
-     "js/ex_admin_common.js": ["web/static/vendor/ex_admin_common.js"],
-     "js/admin_lte2.js": ["web/static/vendor/admin_lte2.js"],
-     "js/jquery.min.js": ["web/static/vendor/jquery.min.js"],
+      joinTo: {
+        "js/app.js": /^(web\/static\/js)|(node_modules)/,
+        "js/ex_admin_common.js": ["web/static/vendor/ex_admin_common.js"],
+        "js/admin_lte2.js": ["web/static/vendor/admin_lte2.js"],
+        "js/jquery.min.js": ["web/static/vendor/jquery.min.js"],
+      }
     },
     stylesheets: {
       joinTo: {
@@ -63,45 +65,3 @@ exports.config = {
     }
   }
 };
-
-// To add the ExAdmin generated assets to your brunch build, do the following:
-//
-// Replace
-//
-//     javascripts: {
-//       joinTo: "js/app.js"
-//     },
-//
-// With
-//
-//     javascripts: {
-//       joinTo: {
-//         "js/app.js": /^(web\/static\/js)|(node_modules)/,
-//         "js/ex_admin_common.js": ["web/static/vendor/ex_admin_common.js"],
-//         "js/admin_lte2.js": ["web/static/vendor/admin_lte2.js"],
-//         "js/jquery.min.js": ["web/static/vendor/jquery.min.js"],
-//       }
-//     },
-//
-// Replace
-//
-//     stylesheets: {
-//       joinTo: "css/app.css",
-//       order: {
-//         after: ["web/static/css/app.css"] // concat app.css last
-//       }
-//     },
-//
-// With
-//
-//     stylesheets: {
-//       joinTo: {
-//         "css/app.css": /^(web\/static\/css)/,
-//         "css/admin_lte2.css": ["web/static/vendor/admin_lte2.css"],
-//         "css/active_admin.css.css": ["web/static/vendor/active_admin.css.css"],
-//       },
-//       order: {
-//         after: ["web/static/css/app.css"] // concat app.css last
-//       }
-//     },
-//
