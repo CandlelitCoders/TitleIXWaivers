@@ -4,7 +4,8 @@ defmodule TitleIxWaivers.WaiverController do
   alias TitleIxWaivers.Waiver
 
   def index(conn, _params) do
-    waivers = Repo.all(Waiver)
+    query = from(w in Waiver, order_by: [w.state, w.name, w.date_requested, w.date_granted])
+    waivers = Repo.all(query)
     render(conn, "index.html", waivers: waivers)
   end
 
