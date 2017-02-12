@@ -3,6 +3,12 @@ html {
     min-height: 100%;
 }
 
+.table > thead th,
+.table td {
+    text-align: center;
+    text-transform: uppercase;
+}
+
 .results tr[visible='false'],
 .no-result{
     display:none;

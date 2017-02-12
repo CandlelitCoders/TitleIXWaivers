@@ -9,10 +9,10 @@
 <table class="table table-hover table-bordered results">
   <thead>
     <tr>
-      <th>Name</th>
-      <th class="col-md-2 col-xs-2">State</th>
-      <th class="col-md-5 col-xs-5">Date Requested</th>
-      <th class="col-md-5 col-xs-5">Date Granted</th>
+      <th class="col-md-6 col-xs-6">Name</th>
+      <th class="col-md-1 col-xs-1">State</th>
+      <th class="col-md-2 col-xs-2">Requested</th>
+      <th class="col-md-2 col-xs-2">Granted</th>
     </tr>
     <tr class="warning no-result">
       <td colspan="4"><%= fa_icon("exclamation-triangle") %> No results found</td>
