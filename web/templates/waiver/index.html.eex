@@ -21,7 +21,7 @@
   <tbody>
 <%= for waiver <- @waivers do %>
     <tr>
-      <th scope="row"><%= link(waiver.name, to: '#' || waiver_path(@conn, :show, waiver)) %></th>
+      <th scope="row"><%= waiver.name %></th>
       <td><%= waiver.state %></td>
       <td><%= waiver.date_requested %></td>
       <td><%= waiver.date_granted || "Pending" %></td>

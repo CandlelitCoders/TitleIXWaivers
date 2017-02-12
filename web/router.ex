@@ -37,7 +37,7 @@ defmodule TitleIxWaivers.Router do
 
   scope "/", TitleIxWaivers do
     pipe_through :browser
-    get "/", WaiverController, :index
+    resources "/", WaiverController, only: [:index]
   end
 
   scope "/admin", ExAdmin do
