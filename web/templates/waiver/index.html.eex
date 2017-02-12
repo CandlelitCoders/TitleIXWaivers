@@ -23,8 +23,18 @@
     <tr>
       <th scope="row"><%= waiver.name %></th>
       <td><%= waiver.state %></td>
-      <td><%= waiver.date_requested %></td>
-      <td><%= waiver.date_granted || "Pending" %></td>
+      <td>
+        <%= waiver.date_requested %>
+          <%= if waiver.waiver_request_form do %>
+            <%= link(fa_icon("download"), to: TitleIxWaivers.WaiverRequestForm.url({waiver.waiver_request_form, waiver})) %>
+          <% end %>
+      </td>
+      <td>
+        <%= waiver.date_granted || "Pending" %>
+        <%= if waiver.waiver_response_letter do %>
+          <%= link(fa_icon("download"), to: TitleIxWaivers.WaiverResponseLetter.url({waiver.waiver_response_letter, waiver})) %>
+        <% end %>
+      </td>
     </tr>
 <% end %>
   </tbody>

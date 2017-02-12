@@ -50,6 +50,7 @@ defmodule TitleIxWaivers.Web do
       use Phoenix.HTML
       import FontAwesomePhoenix.HTML
 
+      import TitleIxWaivers.WaiverRequestForm
 
       import TitleIxWaivers.Router.Helpers
       import TitleIxWaivers.ErrorHelpers

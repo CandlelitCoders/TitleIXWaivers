@@ -41,3 +41,6 @@ config :title_ix_waivers, TitleIxWaivers.Repo,
   database: "title_ix_waivers_dev",
   hostname: "localhost",
   pool_size: 10
+
+config :arc,
+  storage: Arc.Storage.Local
