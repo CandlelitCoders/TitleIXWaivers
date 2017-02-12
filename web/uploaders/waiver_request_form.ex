@@ -7,6 +7,8 @@ defmodule TitleIxWaivers.WaiverRequestForm do
 
   @versions [:original]
 
+  @acl :public_read
+
   # To add a thumbnail version:
   # @versions [:original, :thumb]
 

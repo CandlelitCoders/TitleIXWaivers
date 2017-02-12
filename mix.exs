@@ -19,7 +19,7 @@ defmodule TitleIxWaivers.Mixfile do
   def application do
     [mod: {TitleIxWaivers, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :coherence, :ex_aws, :hackney, :poison, :arc_ecto]]
+                    :phoenix_ecto, :postgrex, :coherence, :ex_aws, :httpoison, :poison, :arc_ecto]]
   end
 
   # Specifies which paths to compile per environment.
@@ -41,10 +41,10 @@ defmodule TitleIxWaivers.Mixfile do
      {:font_awesome_phoenix, "~> 0.1"},
      {:ex_admin, "~> 0.8"},
      {:coherence, "~> 0.3"},
-     {:arc, "~> 0.7.0", override: true},
-     {:ex_aws, "~> 1.1"},
-     {:hackney, "~> 1.6"},
-     {:sweet_xml, "~> 0.6"},
+     {:arc, "~> 0.5.3"},
+     {:ex_aws, "~> 0.5.0"},
+     {:poison, "~> 2.0"},
+     {:httpoison, "~> 0.9.0"},
      {:arc_ecto, "~> 0.4.4"},
    ]
   end

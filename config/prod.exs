@@ -27,7 +27,8 @@ config :title_ix_waivers, TitleIxWaivers.Repo,
   ssl: true
 
 config :arc,
-  bucket: {:system, "AWS_S3_BUCKET"}
+  bucket: System.get_env("AWS_S3_BUCKET"),
+  virtual_host: true
 
 # ## SSL Support
 #
