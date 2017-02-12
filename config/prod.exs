@@ -27,19 +27,8 @@ config :title_ix_waivers, TitleIxWaivers.Repo,
   ssl: true
 
 config :arc,
-  storage: Arc.Storage.S3,
   bucket: {:system, "AWS_S3_BUCKET"}
 
-config :ex_aws,
-  access_key_id: {:system, "AWS_ACCESS_KEY_ID"},
-  secret_access_key: {:sytem, "AWS_SECRET_ACCESS_KEY"},
-  region: "us-east-1",
-  host: "s3.us-east-1.amazonaws.com",
-  s3: [
-    scheme: "https://",
-    host: "s3.us-east-1.amazonaws.com",
-    region: "us-east-1"
-  ]
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
